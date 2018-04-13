@@ -753,10 +753,9 @@
             // plLocations
             // 
             this.plLocations.Controls.Add(this.splitContainer1);
-            this.plLocations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plLocations.Location = new System.Drawing.Point(51, 52);
             this.plLocations.Name = "plLocations";
-            this.plLocations.Size = new System.Drawing.Size(999, 595);
+            this.plLocations.Size = new System.Drawing.Size(471, 84);
             this.plLocations.TabIndex = 8;
             this.plLocations.Visible = false;
             // 
@@ -780,8 +779,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnAddDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.txtSearchDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.lsDepartment);
-            this.splitContainer1.Size = new System.Drawing.Size(999, 595);
-            this.splitContainer1.SplitterDistance = 698;
+            this.splitContainer1.Size = new System.Drawing.Size(471, 84);
+            this.splitContainer1.SplitterDistance = 329;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -790,7 +789,7 @@
             this.lbMapPos.AutoSize = true;
             this.lbMapPos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbMapPos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMapPos.Location = new System.Drawing.Point(0, 568);
+            this.lbMapPos.Location = new System.Drawing.Point(0, 57);
             this.lbMapPos.Margin = new System.Windows.Forms.Padding(3);
             this.lbMapPos.Name = "lbMapPos";
             this.lbMapPos.Padding = new System.Windows.Forms.Padding(3);
@@ -865,7 +864,7 @@
             this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gmap.ShowTileGridLines = false;
-            this.gmap.Size = new System.Drawing.Size(698, 595);
+            this.gmap.Size = new System.Drawing.Size(329, 84);
             this.gmap.TabIndex = 1;
             this.gmap.Zoom = 15D;
             this.gmap.OnPositionChanged += new GMap.NET.PositionChanged(this.gmap_OnPositionChanged);
@@ -922,7 +921,7 @@
             this.txtSearchDepartment.Location = new System.Drawing.Point(0, 0);
             this.txtSearchDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchDepartment.Name = "txtSearchDepartment";
-            this.txtSearchDepartment.Size = new System.Drawing.Size(300, 33);
+            this.txtSearchDepartment.Size = new System.Drawing.Size(141, 33);
             this.txtSearchDepartment.TabIndex = 2;
             this.txtSearchDepartment.Text = "Search Department";
             this.txtSearchDepartment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -943,7 +942,7 @@
             this.lsDepartment.ItemHeight = 21;
             this.lsDepartment.Location = new System.Drawing.Point(0, 50);
             this.lsDepartment.Name = "lsDepartment";
-            this.lsDepartment.Size = new System.Drawing.Size(315, 498);
+            this.lsDepartment.Size = new System.Drawing.Size(156, 498);
             this.lsDepartment.TabIndex = 1;
             this.lsDepartment.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsDepartment_MouseClick);
             // 
