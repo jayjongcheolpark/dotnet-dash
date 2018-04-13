@@ -80,11 +80,12 @@
             this.btnChangeView = new Bunifu.Framework.UI.BunifuTileButton();
             this.txtSearchLocation = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
-            this.bbtnAddDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAddDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtSearchDepartment = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lsDepartment = new System.Windows.Forms.ListBox();
             this.plEmployees = new System.Windows.Forms.Panel();
             this.plSalary = new System.Windows.Forms.Panel();
+            this.btnDeleteDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlSidebar.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicator)).BeginInit();
@@ -775,7 +776,8 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.bbtnAddDepartment);
+            this.splitContainer1.Panel2.Controls.Add(this.btnDeleteDepartment);
+            this.splitContainer1.Panel2.Controls.Add(this.btnAddDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.txtSearchDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.lsDepartment);
             this.splitContainer1.Size = new System.Drawing.Size(999, 595);
@@ -868,42 +870,41 @@
             this.gmap.Zoom = 15D;
             this.gmap.OnPositionChanged += new GMap.NET.PositionChanged(this.gmap_OnPositionChanged);
             // 
-            // bbtnAddDepartment
+            // btnAddDepartment
             // 
-            this.bbtnAddDepartment.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.bbtnAddDepartment.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bbtnAddDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bbtnAddDepartment.BorderRadius = 0;
-            this.bbtnAddDepartment.ButtonText = "           Add Department";
-            this.bbtnAddDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bbtnAddDepartment.DisabledColor = System.Drawing.Color.Gray;
-            this.bbtnAddDepartment.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bbtnAddDepartment.Iconcolor = System.Drawing.Color.Transparent;
-            this.bbtnAddDepartment.Iconimage = ((System.Drawing.Image)(resources.GetObject("bbtnAddDepartment.Iconimage")));
-            this.bbtnAddDepartment.Iconimage_right = null;
-            this.bbtnAddDepartment.Iconimage_right_Selected = null;
-            this.bbtnAddDepartment.Iconimage_Selected = null;
-            this.bbtnAddDepartment.IconMarginLeft = 0;
-            this.bbtnAddDepartment.IconMarginRight = 0;
-            this.bbtnAddDepartment.IconRightVisible = true;
-            this.bbtnAddDepartment.IconRightZoom = 0D;
-            this.bbtnAddDepartment.IconVisible = true;
-            this.bbtnAddDepartment.IconZoom = 50D;
-            this.bbtnAddDepartment.IsTab = false;
-            this.bbtnAddDepartment.Location = new System.Drawing.Point(0, 547);
-            this.bbtnAddDepartment.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.bbtnAddDepartment.Name = "bbtnAddDepartment";
-            this.bbtnAddDepartment.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.bbtnAddDepartment.OnHovercolor = System.Drawing.Color.SteelBlue;
-            this.bbtnAddDepartment.OnHoverTextColor = System.Drawing.Color.White;
-            this.bbtnAddDepartment.selected = false;
-            this.bbtnAddDepartment.Size = new System.Drawing.Size(300, 48);
-            this.bbtnAddDepartment.TabIndex = 3;
-            this.bbtnAddDepartment.Text = "           Add Department";
-            this.bbtnAddDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bbtnAddDepartment.Textcolor = System.Drawing.Color.White;
-            this.bbtnAddDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bbtnAddDepartment.Click += new System.EventHandler(this.bbtnAddDepartment_Click);
+            this.btnAddDepartment.Activecolor = System.Drawing.Color.DodgerBlue;
+            this.btnAddDepartment.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddDepartment.BorderRadius = 0;
+            this.btnAddDepartment.ButtonText = "Add";
+            this.btnAddDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddDepartment.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddDepartment.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAddDepartment.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAddDepartment.Iconimage")));
+            this.btnAddDepartment.Iconimage_right = null;
+            this.btnAddDepartment.Iconimage_right_Selected = null;
+            this.btnAddDepartment.Iconimage_Selected = null;
+            this.btnAddDepartment.IconMarginLeft = 0;
+            this.btnAddDepartment.IconMarginRight = 0;
+            this.btnAddDepartment.IconRightVisible = true;
+            this.btnAddDepartment.IconRightZoom = 0D;
+            this.btnAddDepartment.IconVisible = true;
+            this.btnAddDepartment.IconZoom = 50D;
+            this.btnAddDepartment.IsTab = false;
+            this.btnAddDepartment.Location = new System.Drawing.Point(0, 547);
+            this.btnAddDepartment.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnAddDepartment.Name = "btnAddDepartment";
+            this.btnAddDepartment.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnAddDepartment.OnHovercolor = System.Drawing.Color.SteelBlue;
+            this.btnAddDepartment.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAddDepartment.selected = false;
+            this.btnAddDepartment.Size = new System.Drawing.Size(148, 48);
+            this.btnAddDepartment.TabIndex = 3;
+            this.btnAddDepartment.Text = "Add";
+            this.btnAddDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddDepartment.Textcolor = System.Drawing.Color.White;
+            this.btnAddDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDepartment.Click += new System.EventHandler(this.bbtnAddDepartment_Click);
             // 
             // txtSearchDepartment
             // 
@@ -961,6 +962,41 @@
             this.plSalary.Size = new System.Drawing.Size(200, 25);
             this.plSalary.TabIndex = 10;
             this.plSalary.Visible = false;
+            // 
+            // btnDeleteDepartment
+            // 
+            this.btnDeleteDepartment.Activecolor = System.Drawing.Color.DodgerBlue;
+            this.btnDeleteDepartment.BackColor = System.Drawing.Color.Crimson;
+            this.btnDeleteDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteDepartment.BorderRadius = 0;
+            this.btnDeleteDepartment.ButtonText = "Delet";
+            this.btnDeleteDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteDepartment.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDeleteDepartment.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDeleteDepartment.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeleteDepartment.Iconimage")));
+            this.btnDeleteDepartment.Iconimage_right = null;
+            this.btnDeleteDepartment.Iconimage_right_Selected = null;
+            this.btnDeleteDepartment.Iconimage_Selected = null;
+            this.btnDeleteDepartment.IconMarginLeft = 0;
+            this.btnDeleteDepartment.IconMarginRight = 0;
+            this.btnDeleteDepartment.IconRightVisible = true;
+            this.btnDeleteDepartment.IconRightZoom = 0D;
+            this.btnDeleteDepartment.IconVisible = true;
+            this.btnDeleteDepartment.IconZoom = 50D;
+            this.btnDeleteDepartment.IsTab = false;
+            this.btnDeleteDepartment.Location = new System.Drawing.Point(147, 547);
+            this.btnDeleteDepartment.Margin = new System.Windows.Forms.Padding(12, 16, 12, 16);
+            this.btnDeleteDepartment.Name = "btnDeleteDepartment";
+            this.btnDeleteDepartment.Normalcolor = System.Drawing.Color.Crimson;
+            this.btnDeleteDepartment.OnHovercolor = System.Drawing.Color.DarkRed;
+            this.btnDeleteDepartment.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDeleteDepartment.selected = false;
+            this.btnDeleteDepartment.Size = new System.Drawing.Size(153, 48);
+            this.btnDeleteDepartment.TabIndex = 4;
+            this.btnDeleteDepartment.Text = "Delet";
+            this.btnDeleteDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDeleteDepartment.Textcolor = System.Drawing.Color.White;
+            this.btnDeleteDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // FormDashboard
             // 
@@ -1055,6 +1091,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSearchDepartment;
         private Bunifu.Framework.UI.BunifuTileButton btnChangeView;
         private Bunifu.Framework.UI.BunifuCustomLabel lbMapPos;
-        private Bunifu.Framework.UI.BunifuFlatButton bbtnAddDepartment;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAddDepartment;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDeleteDepartment;
     }
 }

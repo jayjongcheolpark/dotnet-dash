@@ -19,6 +19,7 @@ namespace Dash
         List<Department> departmentList = new List<Department>();
         BindingSource departmentBnd = new BindingSource();
 
+
         public FormDashboard()
         {
             InitializeComponent();
@@ -50,7 +51,8 @@ namespace Dash
             salaryTab.IconZoom = 50.0;
             btnEditPersonalInformation.IconZoom = 60.0;
             btnEditJobInformation.IconZoom = 60.0;
-            bbtnAddDepartment.IconZoom = 50.0;
+            btnAddDepartment.IconZoom = 50.0;
+            btnDeleteDepartment.IconZoom = 50.0;
 
             gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
