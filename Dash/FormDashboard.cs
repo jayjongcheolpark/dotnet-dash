@@ -50,6 +50,7 @@ namespace Dash
             salaryTab.IconZoom = 50.0;
             btnEditPersonalInformation.IconZoom = 60.0;
             btnEditJobInformation.IconZoom = 60.0;
+            bbtnAddDepartment.IconZoom = 50.0;
 
             gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
@@ -199,6 +200,18 @@ namespace Dash
         private void gmap_OnPositionChanged(GMap.NET.PointLatLng point)
         {
             lbMapPos.Text = "lat: " + gmap.Position.Lat + " lng: " + gmap.Position.Lng;
+        }
+
+        private void bbtnAddDepartment_Click(object sender, EventArgs e)
+        {
+            AddDepartment addDepartment = new AddDepartment();
+            addDepartment.ShowDialog();
+            if (addDepartment.DialogResult.Equals(DialogResult.OK))
+            {
+                MessageBox.Show("Add Successful!");
+                departmentList.Add(new Department("4",addDepartment.DepartmentName, addDepartment.DepartmentAddress));
+                departmentBnd.ResetBindings(false);
+            }
         }
     }
 }

@@ -124,6 +124,30 @@
     <value>76</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bbtnAddDepartment.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
+        TUUH4gQNARMbevqMfQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPrSURBVHhe
+        7Zs9Sx1BFIYVowQMWAkpLG3SBgQFazurkMZGiFjYWfoDbPz4DVb+gBCLCIJFJJBKsDMWaVIkYBUhJE1y
+        8z5330M216979e7syuSBV9wzM+ecGb1752N3oGpardaoNC+tSpvSrnQonUoXFr9jo4w61KXNqN08LJT4
+        uPRKeiP9kO4KbfGBr3G7byZKcERakY6kX1Inv6Vz6UTal3akdYvf30qUUYe6neDznUSMEYetHyUzKC1I
+        n6ROzqQtaVbqOmnqug1t8dEJsYg56Cb1oATmpGOpDNdr0jNXuzf4ss+rYs25WjoUdEI6IIMSH6UXrlIZ
+        xHCsMuQy4SrVokAz0heimq8Sn8tHrlI5xHJMYgfkNOMq1aAAi9JPogluVBvSExcnh9jOIW6a5Lbo4v4h
+        p0PSNhHMd+mli2uHXJxTQK5DLr4fOJJe49V8lp67uDGQk3MLyPn+gyAn5b/8B+mpixoHuTnHYNtFd0MO
+        +MwHOH7sosZCjs41uNs9QQ2528cNj3+txv7lOyFX5wz0obdvBzXgez6+6ri5NO4zfxvk7NyBvnQ/T1Dl
+        mOTw9dKYu32vkLv7AAc234wqMr0NNmx+sNCHoittbp42qwILm5hvM8uqbJIj38PSe2vY5r5DH6SYMdK3
+        6xdQKmSFFazYXAnyP1WEaTNlcyXIP9PmYMHmf1EBS9BY0rLYqHRuL//T7UgF0zZXgvyzdogFFH28vDSX
+        sTxKKVZ1yQYAFINVZHD5v1tGdnLg2KZKUZykAwCKE/e3I5sKZGAPL7ax1myuFMWpYwDYVAH6+nePURdL
+        bXNB33ZybkJx6hgAdpaCJZvbBXuFrXVmU+UoVvIBAMWKPca9MLBvH1vXW21jAhSrrgFgoxXo8ygGDiCC
+        WderHMWqawDYbQ7mMXAKA8yZk+23K1ZdA8B8J9YHqxg4ioJz10mC4tUyAKB4HL7AJhecx8GJy5OgeHUO
+        ACdQsMsFh5Kw7/IkKF6dA8AxHBxywcks7Li8J9RuUqIzvao89+D3q+rcpkmn0RNqx1kknHLB8TSsu7xr
+        1Ga5aFory06na9SGA1m4+D8A+pH9RyD7m2D2X4PZT4SynwpnvxjKezlsY74bIqCL7LfE8t4UBRny3RYH
+        GbM/GMn7aAxUkPJwNOUA3H44CipMeTyeZADku/vjcVCFJA9IyPeY9M0as7nv0Acp6O65YlVM8oiMfDMI
+        VXa+90dkQJXzfkgK1CDfx+QCNcz3QclADvJ9VBbkJO+HpQFHUp6Py5eR0zxfmCijAPm+MhMoUL4vTZVR
+        0DxfmyujBPJ9cbKMkiFpPpd5vTp7FUowv5enr0OJN/j1+YGBP6bGVYLtuamVAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="gplPersonalInfo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

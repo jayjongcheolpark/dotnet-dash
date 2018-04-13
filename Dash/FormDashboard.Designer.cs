@@ -80,6 +80,7 @@
             this.btnChangeView = new Bunifu.Framework.UI.BunifuTileButton();
             this.txtSearchLocation = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
+            this.bbtnAddDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtSearchDepartment = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lsDepartment = new System.Windows.Forms.ListBox();
             this.plEmployees = new System.Windows.Forms.Panel();
@@ -774,6 +775,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.bbtnAddDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.txtSearchDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.lsDepartment);
             this.splitContainer1.Size = new System.Drawing.Size(999, 595);
@@ -866,6 +868,43 @@
             this.gmap.Zoom = 15D;
             this.gmap.OnPositionChanged += new GMap.NET.PositionChanged(this.gmap_OnPositionChanged);
             // 
+            // bbtnAddDepartment
+            // 
+            this.bbtnAddDepartment.Activecolor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddDepartment.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bbtnAddDepartment.BorderRadius = 0;
+            this.bbtnAddDepartment.ButtonText = "           Add Department";
+            this.bbtnAddDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bbtnAddDepartment.DisabledColor = System.Drawing.Color.Gray;
+            this.bbtnAddDepartment.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bbtnAddDepartment.Iconcolor = System.Drawing.Color.Transparent;
+            this.bbtnAddDepartment.Iconimage = ((System.Drawing.Image)(resources.GetObject("bbtnAddDepartment.Iconimage")));
+            this.bbtnAddDepartment.Iconimage_right = null;
+            this.bbtnAddDepartment.Iconimage_right_Selected = null;
+            this.bbtnAddDepartment.Iconimage_Selected = null;
+            this.bbtnAddDepartment.IconMarginLeft = 0;
+            this.bbtnAddDepartment.IconMarginRight = 0;
+            this.bbtnAddDepartment.IconRightVisible = true;
+            this.bbtnAddDepartment.IconRightZoom = 0D;
+            this.bbtnAddDepartment.IconVisible = true;
+            this.bbtnAddDepartment.IconZoom = 50D;
+            this.bbtnAddDepartment.IsTab = false;
+            this.bbtnAddDepartment.Location = new System.Drawing.Point(0, 547);
+            this.bbtnAddDepartment.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.bbtnAddDepartment.Name = "bbtnAddDepartment";
+            this.bbtnAddDepartment.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddDepartment.OnHovercolor = System.Drawing.Color.SteelBlue;
+            this.bbtnAddDepartment.OnHoverTextColor = System.Drawing.Color.White;
+            this.bbtnAddDepartment.selected = false;
+            this.bbtnAddDepartment.Size = new System.Drawing.Size(300, 48);
+            this.bbtnAddDepartment.TabIndex = 3;
+            this.bbtnAddDepartment.Text = "           Add Department";
+            this.bbtnAddDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bbtnAddDepartment.Textcolor = System.Drawing.Color.White;
+            this.bbtnAddDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bbtnAddDepartment.Click += new System.EventHandler(this.bbtnAddDepartment_Click);
+            // 
             // txtSearchDepartment
             // 
             this.txtSearchDepartment.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -903,7 +942,7 @@
             this.lsDepartment.ItemHeight = 21;
             this.lsDepartment.Location = new System.Drawing.Point(0, 50);
             this.lsDepartment.Name = "lsDepartment";
-            this.lsDepartment.Size = new System.Drawing.Size(309, 545);
+            this.lsDepartment.Size = new System.Drawing.Size(315, 498);
             this.lsDepartment.TabIndex = 1;
             this.lsDepartment.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsDepartment_MouseClick);
             // 
@@ -1016,5 +1055,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSearchDepartment;
         private Bunifu.Framework.UI.BunifuTileButton btnChangeView;
         private Bunifu.Framework.UI.BunifuCustomLabel lbMapPos;
+        private Bunifu.Framework.UI.BunifuFlatButton bbtnAddDepartment;
     }
 }

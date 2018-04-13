@@ -22,6 +22,15 @@ namespace Dash
             _objId++;
         }
 
+        public Department(string name, string address)
+        {
+            _objId++;
+            this._did = _objId.ToString();
+            this._dname = name;
+            this._daddress = address;
+            
+        }
+
         public override string ToString()
         {
             return _dname;
