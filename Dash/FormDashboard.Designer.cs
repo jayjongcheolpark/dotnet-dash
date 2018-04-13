@@ -221,8 +221,8 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.btnDeleteDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.btnAddDepartment);
+            this.splitContainer1.Panel2.Controls.Add(this.btnDeleteDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.txtSearchDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.lsDepartment);
             this.splitContainer1.Size = new System.Drawing.Size(999, 595);
@@ -352,7 +352,7 @@
             this.lsDepartment.ItemHeight = 21;
             this.lsDepartment.Location = new System.Drawing.Point(0, 50);
             this.lsDepartment.Name = "lsDepartment";
-            this.lsDepartment.Size = new System.Drawing.Size(315, 498);
+            this.lsDepartment.Size = new System.Drawing.Size(300, 500);
             this.lsDepartment.TabIndex = 1;
             this.lsDepartment.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsDepartment_MouseClick);
             // 
@@ -374,7 +374,7 @@
             // 
             // btnDeleteDepartment
             // 
-            this.btnDeleteDepartment.Activecolor = System.Drawing.Color.Crimson;
+            this.btnDeleteDepartment.Activecolor = System.Drawing.Color.DodgerBlue;
             this.btnDeleteDepartment.BackColor = System.Drawing.Color.Crimson;
             this.btnDeleteDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDeleteDepartment.BorderRadius = 0;
@@ -393,14 +393,14 @@
             this.btnDeleteDepartment.IconVisible = true;
             this.btnDeleteDepartment.IconZoom = 50D;
             this.btnDeleteDepartment.IsTab = false;
-            this.btnDeleteDepartment.Location = new System.Drawing.Point(588, 2912);
+            this.btnDeleteDepartment.Location = new System.Drawing.Point(162, 551);
             this.btnDeleteDepartment.Margin = new System.Windows.Forms.Padding(48, 85, 48, 85);
             this.btnDeleteDepartment.Name = "btnDeleteDepartment";
             this.btnDeleteDepartment.Normalcolor = System.Drawing.Color.Crimson;
             this.btnDeleteDepartment.OnHovercolor = System.Drawing.Color.DarkRed;
             this.btnDeleteDepartment.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDeleteDepartment.selected = false;
-            this.btnDeleteDepartment.Size = new System.Drawing.Size(615, 256);
+            this.btnDeleteDepartment.Size = new System.Drawing.Size(138, 44);
             this.btnDeleteDepartment.TabIndex = 4;
             this.btnDeleteDepartment.Text = "Delet";
             this.btnDeleteDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -429,14 +429,14 @@
             this.btnAddDepartment.IconVisible = true;
             this.btnAddDepartment.IconZoom = 50D;
             this.btnAddDepartment.IsTab = false;
-            this.btnAddDepartment.Location = new System.Drawing.Point(0, 2912);
+            this.btnAddDepartment.Location = new System.Drawing.Point(1, 551);
             this.btnAddDepartment.Margin = new System.Windows.Forms.Padding(24, 37, 24, 37);
             this.btnAddDepartment.Name = "btnAddDepartment";
             this.btnAddDepartment.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnAddDepartment.OnHovercolor = System.Drawing.Color.SteelBlue;
             this.btnAddDepartment.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddDepartment.selected = false;
-            this.btnAddDepartment.Size = new System.Drawing.Size(592, 256);
+            this.btnAddDepartment.Size = new System.Drawing.Size(159, 44);
             this.btnAddDepartment.TabIndex = 3;
             this.btnAddDepartment.Text = "Add";
             this.btnAddDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -874,14 +874,14 @@
             this.salaryTab.IconVisible = true;
             this.salaryTab.IconZoom = 50D;
             this.salaryTab.IsTab = true;
-            this.salaryTab.Location = new System.Drawing.Point(0, 1124);
+            this.salaryTab.Location = new System.Drawing.Point(0, 244);
             this.salaryTab.Margin = new System.Windows.Forms.Padding(12, 16, 12, 16);
             this.salaryTab.Name = "salaryTab";
             this.salaryTab.Normalcolor = System.Drawing.Color.White;
             this.salaryTab.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.salaryTab.OnHoverTextColor = System.Drawing.Color.White;
             this.salaryTab.selected = false;
-            this.salaryTab.Size = new System.Drawing.Size(680, 256);
+            this.salaryTab.Size = new System.Drawing.Size(51, 51);
             this.salaryTab.TabIndex = 4;
             this.salaryTab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.salaryTab.Textcolor = System.Drawing.Color.White;
@@ -909,14 +909,14 @@
             this.employeesTab.IconVisible = true;
             this.employeesTab.IconZoom = 50D;
             this.employeesTab.IsTab = true;
-            this.employeesTab.Location = new System.Drawing.Point(0, 835);
+            this.employeesTab.Location = new System.Drawing.Point(0, 179);
             this.employeesTab.Margin = new System.Windows.Forms.Padding(12, 16, 12, 16);
             this.employeesTab.Name = "employeesTab";
             this.employeesTab.Normalcolor = System.Drawing.Color.White;
             this.employeesTab.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.employeesTab.OnHoverTextColor = System.Drawing.Color.White;
             this.employeesTab.selected = false;
-            this.employeesTab.Size = new System.Drawing.Size(680, 256);
+            this.employeesTab.Size = new System.Drawing.Size(51, 51);
             this.employeesTab.TabIndex = 3;
             this.employeesTab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.employeesTab.Textcolor = System.Drawing.Color.White;
@@ -944,14 +944,14 @@
             this.userInfoTab.IconVisible = true;
             this.userInfoTab.IconZoom = 50D;
             this.userInfoTab.IsTab = true;
-            this.userInfoTab.Location = new System.Drawing.Point(0, 261);
+            this.userInfoTab.Location = new System.Drawing.Point(0, 49);
             this.userInfoTab.Margin = new System.Windows.Forms.Padding(12, 16, 12, 16);
             this.userInfoTab.Name = "userInfoTab";
             this.userInfoTab.Normalcolor = System.Drawing.Color.White;
             this.userInfoTab.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.userInfoTab.OnHoverTextColor = System.Drawing.Color.White;
             this.userInfoTab.selected = true;
-            this.userInfoTab.Size = new System.Drawing.Size(680, 256);
+            this.userInfoTab.Size = new System.Drawing.Size(51, 51);
             this.userInfoTab.TabIndex = 1;
             this.userInfoTab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.userInfoTab.Textcolor = System.Drawing.Color.White;
@@ -989,14 +989,14 @@
             this.locationsTab.IconVisible = true;
             this.locationsTab.IconZoom = 50D;
             this.locationsTab.IsTab = true;
-            this.locationsTab.Location = new System.Drawing.Point(0, 549);
+            this.locationsTab.Location = new System.Drawing.Point(0, 114);
             this.locationsTab.Margin = new System.Windows.Forms.Padding(12, 16, 12, 16);
             this.locationsTab.Name = "locationsTab";
             this.locationsTab.Normalcolor = System.Drawing.Color.White;
             this.locationsTab.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.locationsTab.OnHoverTextColor = System.Drawing.Color.White;
             this.locationsTab.selected = false;
-            this.locationsTab.Size = new System.Drawing.Size(680, 256);
+            this.locationsTab.Size = new System.Drawing.Size(51, 51);
             this.locationsTab.TabIndex = 2;
             this.locationsTab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.locationsTab.Textcolor = System.Drawing.Color.White;
