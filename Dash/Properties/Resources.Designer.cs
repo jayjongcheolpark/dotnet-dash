@@ -63,6 +63,16 @@ namespace Dash.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Buisiness {
+            get {
+                object obj = ResourceManager.GetObject("Buisiness", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap presentation {
             get {
                 object obj = ResourceManager.GetObject("presentation", resourceCulture);
