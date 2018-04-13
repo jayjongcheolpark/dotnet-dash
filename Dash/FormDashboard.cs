@@ -215,5 +215,14 @@ namespace Dash
                 departmentBnd.ResetBindings(false);
             }
         }
+
+        private void btnDeleteDepartment_Click(object sender, EventArgs e)
+        {
+            if(lsDepartment.SelectedItem != null)
+            {
+                departmentList.RemoveAt(lsDepartment.SelectedIndex);
+                departmentBnd.ResetBindings(false);
+            }
+        }
     }
 }
