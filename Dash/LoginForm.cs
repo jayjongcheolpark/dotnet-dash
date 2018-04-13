@@ -19,9 +19,12 @@ namespace Dash
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            FormDashboard formDashboard = new FormDashboard();
-            formDashboard.ShowDialog();
-            this.Hide();
+            if (AdminDataController.VerifyAdminAccount(txtUserName.Text, txtPassword.Text))
+            {
+              FormDashboard formDashboard = new FormDashboard();
+              formDashboard.ShowDialog();
+              this.Hide();
+            }
         }
-    }
+  }
 }
