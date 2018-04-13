@@ -983,7 +983,7 @@
       this.lsDepartment.ItemHeight = 21;
       this.lsDepartment.Location = new System.Drawing.Point(0, 50);
       this.lsDepartment.Name = "lsDepartment";
-      this.lsDepartment.Size = new System.Drawing.Size(309, 500);
+      this.lsDepartment.Size = new System.Drawing.Size(312, 500);
       this.lsDepartment.TabIndex = 1;
       this.lsDepartment.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsDepartment_MouseClick);
       // 

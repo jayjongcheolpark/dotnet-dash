@@ -20,8 +20,6 @@ namespace Dash
 
       string username = admindataset.Admin[0].Username;
       string password = admindataset.Admin[0].Password;
-      MessageBox.Show("**" + username + "*" + password + "*");
-      MessageBox.Show("***" + inputUsername + "*" + inputPassword + "*");
       if (username.Equals(inputUsername) && password.Equals(inputPassword))
       {
         return true;
