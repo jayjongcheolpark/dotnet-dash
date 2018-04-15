@@ -130,14 +130,27 @@ namespace Dash
             User user = null;
             try
             {
-                _verifyCM.Parameters.AddWithValue("@val1", username);
-                _verifyCM.Parameters.AddWithValue("@val2", password);
+                if (_verifyCM.Parameters.Count > 0)
+                {
+                    _verifyCM.Parameters[0].Value = username;
+                    _verifyCM.Parameters[1].Value = password;
+                }
+                else
+                {
+                    _verifyCM.Parameters.AddWithValue("@val1", username);
+                    _verifyCM.Parameters.AddWithValue("@val2", password);
+                }
                 MySqlDataReader reader = _verifyCM.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    user = new User((int)reader.GetValue(0), (string)reader.GetValue(1), username);
+                    while (reader.Read())
+                    {
+                        user = new User(reader.GetInt32(0), reader.GetString(1), username);
+                    }
                 }
-            }catch (MySqlException ex)
+                reader.Close();
+            }
+            catch (MySqlException ex)
             {
                 throw new Exception("Could not verify user: " + ex);
             }

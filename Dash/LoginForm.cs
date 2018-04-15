@@ -12,14 +12,19 @@ namespace Dash
 {
     public partial class LoginForm : Form
     {
-        DBConnect dbConnect;
+        DBConnect _dbConnect;
+        public DBConnect DbConnection
+        {
+            get => _dbConnect;
+            set => _dbConnect = value;
+        }
         public LoginForm()
         {   
             InitializeComponent();
-            dbConnect = new DBConnect("alekhin_ex4", "alekhin_user", "KNn0Zj6mo28W");
+            _dbConnect = new DBConnect("alekhin_ex4", "alekhin_user", "KNn0Zj6mo28W");
             try
             {
-                dbConnect.OpenConnection();
+                _dbConnect.OpenConnection();
             }catch(Exception ex)
             {
                 MessageBox.Show("Data connection problem: "+ex.Message);
@@ -31,12 +36,24 @@ namespace Dash
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            
-                this.Hide();
-                FormDashboard formDashboard = new FormDashboard();
-                formDashboard.ShowDialog();
-                
-            
+            try
+            {
+                User user = _dbConnect.verifyUser(txtUserName.Text.Trim(), txtPassword.Text.Trim());
+                if (user != null) {
+                    this.Hide();
+                    FormDashboard formDashboard = new FormDashboard();
+                    formDashboard.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong username or password");
+
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }  
         }
 
         private void txtPassword_Enter(object sender, EventArgs e)
