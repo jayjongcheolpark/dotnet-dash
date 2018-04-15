@@ -39,7 +39,7 @@ namespace Dash
                 {
                     _verifyCM = new MySqlCommand();
                     _verifyCM.Connection = _connection;
-                    _verifyCM.CommandText = "SELECT id, name, city, phone, email, birthdate FROM users WHERE username=@val1 AND password=@val2 LIMIT 1";
+                    _verifyCM.CommandText = "SELECT id, name, city, phone, email, birthdate, employee FROM users WHERE username=@val1 AND password=@val2 LIMIT 1";
                     _verifyCM.Prepare();
 
                     _useraddCM = new MySqlCommand();
@@ -121,7 +121,14 @@ namespace Dash
                 {
                     while (reader.Read())
                     {
-                        user = new User(reader.GetInt32("id"), reader.GetString("name"), username, reader.GetString("city"), reader.GetString("phone"), reader.GetString("email"), reader.GetString("birthdate"));
+                        user = new User(reader.GetInt32("id"),
+                            reader.GetString("name"),
+                            username,
+                            reader.GetString("city"),
+                            reader.GetString("phone"),
+                            reader.GetString("email"),
+                            reader.GetString("birthdate"),
+                            reader.GetInt32("employee"));
                     }
                 }
                 reader.Close();

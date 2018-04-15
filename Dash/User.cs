@@ -15,8 +15,9 @@ namespace Dash
         private string _phone;
         private string _email;
         private string _birthdate;
+        private int _empID;
 
-        public User(int uID, string uName, string uLoginName, string city, string phone, string email, string birthdate)
+        public User(int uID, string uName, string uLoginName, string city, string phone, string email, string birthdate, int empID)
         {
             _uID = uID;
             _uName = uName;
@@ -25,6 +26,7 @@ namespace Dash
             _phone = phone;
             _email = email;
             _birthdate = birthdate;
+            _empID = empID;
         }
 
         public string Name
@@ -65,6 +67,12 @@ namespace Dash
         {
             get => _birthdate;
             set => _birthdate = value;
+        }
+
+        public int EmployeeID
+        {
+            get => _empID;
+            set => _empID = value;
         }
     }
 }

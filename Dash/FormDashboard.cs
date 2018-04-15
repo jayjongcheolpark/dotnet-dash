@@ -99,7 +99,8 @@ namespace Dash
             bnlbPersonName.Text = _user.Name;
             bnlbPersonBirthDate.Text = _user.Birthdate;
 
-            //
+            //job information
+            bnlbEmployeeID.Text = _user.EmployeeID.ToString();
 
         }
 
