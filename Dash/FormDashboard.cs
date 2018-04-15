@@ -64,7 +64,7 @@ namespace Dash
             GMapOverlay markers = new GMapOverlay("markers");
             markers.Markers.Add( new GMarkerGoogle(
                 gmap.Position,
-                GMarkerGoogleType.blue_small));
+                GMarkerGoogleType.blue));
             gmap.Overlays.Add(markers);
 
         }
@@ -148,6 +148,7 @@ namespace Dash
             if (lsDepartment.SelectedItem != null)
             {
                 txtSearchLocation.Text = ((Department)lsDepartment.SelectedItem).Address;
+                gmap.Overlays[0].Markers[0].Position=gmap.Position;
             }
         }
 

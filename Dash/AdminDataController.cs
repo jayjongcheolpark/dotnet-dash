@@ -26,7 +26,7 @@ namespace Dash
       }
       else
       {
-        return false;
+        return true;
       }
 
     }

@@ -8,11 +8,13 @@ namespace Dash
 {
     class User
     {
-        private string _uName;
+        private int _uID;
         private string _uLoginName;
+        private string _uName;
 
-        public User(string uName, string uLoginName)
+        public User(int uID, string uName, string uLoginName)
         {
+            _uID = uID;
             _uName = uName;
             _uLoginName = uLoginName;
         }
@@ -26,6 +28,11 @@ namespace Dash
         {
             get => _uLoginName;
             set => _uLoginName = value;
+        }
+
+        public int ID
+        {
+            get => _uID;
         }
     }
 }
