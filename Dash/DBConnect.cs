@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dash
 {
-    class DBConnect
+    public class DBConnect
     {
         private MySqlConnection _connection = null;
         private string _server;
@@ -20,30 +20,6 @@ namespace Dash
             this._uid = uid.Trim();
             this._password = password.Trim();
         }
-
-
-
-        //Constructor
-        public DBConnect()
-        {
-            Initialize();
-        }
-
-        //Initialize values
-        private void Initialize()
-        {
-            _server = "localhost";
-            _database = "connectcsharptomysql";
-            _uid = "username";
-            _password = "password";
-            string connectionString;
-            connectionString = "SERVER=" + _server + ";" + "DATABASE=" +
-            _database + ";" + "UID=" + _uid + ";" + "PASSWORD=" + _password + ";";
-
-            _connection = new MySqlConnection(connectionString);
-        }
-
-
 
         //open connection to database
         public bool OpenConnection()
@@ -63,7 +39,7 @@ namespace Dash
                 {
                     _verifyCM = new MySqlCommand();
                     _verifyCM.Connection = _connection;
-                    _verifyCM.CommandText = "SELECT id, name FROM users WHERE username=@val1 AND password=@val2 LIMIT 1";
+                    _verifyCM.CommandText = "SELECT id, name, city, phone, email, birthdate FROM users WHERE username=@val1 AND password=@val2 LIMIT 1";
                     _verifyCM.Prepare();
 
                     _useraddCM = new MySqlCommand();
@@ -145,7 +121,7 @@ namespace Dash
                 {
                     while (reader.Read())
                     {
-                        user = new User(reader.GetInt32(0), reader.GetString(1), username);
+                        user = new User(reader.GetInt32("id"), reader.GetString("name"), username, reader.GetString("city"), reader.GetString("phone"), reader.GetString("email"), reader.GetString("birthdate"));
                     }
                 }
                 reader.Close();

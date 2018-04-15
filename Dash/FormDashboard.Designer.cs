@@ -66,7 +66,6 @@
             this.bnlbPersonEmail = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bnlbHomePhone = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bnlbPersonAddress = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bnllbFullName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -86,6 +85,7 @@
             this.lsDepartment = new System.Windows.Forms.ListBox();
             this.plEmployees = new System.Windows.Forms.Panel();
             this.plSalary = new System.Windows.Forms.Panel();
+            this.bnlbPersonName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlSidebar.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicator)).BeginInit();
@@ -567,12 +567,12 @@
             this.gplPersonalInfo.BackColor = System.Drawing.Color.Transparent;
             this.gplPersonalInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gplPersonalInfo.BackgroundImage")));
             this.gplPersonalInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gplPersonalInfo.Controls.Add(this.bnlbPersonName);
             this.gplPersonalInfo.Controls.Add(this.btnEditPersonalInformation);
             this.gplPersonalInfo.Controls.Add(this.bnlbPersonBirthDate);
             this.gplPersonalInfo.Controls.Add(this.bnlbPersonEmail);
             this.gplPersonalInfo.Controls.Add(this.bnlbHomePhone);
             this.gplPersonalInfo.Controls.Add(this.bnlbPersonAddress);
-            this.gplPersonalInfo.Controls.Add(this.bnllbFullName);
             this.gplPersonalInfo.Controls.Add(this.bunifuCustomLabel5);
             this.gplPersonalInfo.Controls.Add(this.bunifuCustomLabel4);
             this.gplPersonalInfo.Controls.Add(this.bunifuCustomLabel3);
@@ -610,14 +610,14 @@
             this.btnEditPersonalInformation.IconVisible = true;
             this.btnEditPersonalInformation.IconZoom = 60D;
             this.btnEditPersonalInformation.IsTab = false;
-            this.btnEditPersonalInformation.Location = new System.Drawing.Point(399, 4);
+            this.btnEditPersonalInformation.Location = new System.Drawing.Point(400, 5);
             this.btnEditPersonalInformation.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnEditPersonalInformation.Name = "btnEditPersonalInformation";
             this.btnEditPersonalInformation.Normalcolor = System.Drawing.Color.Transparent;
             this.btnEditPersonalInformation.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(112)))));
             this.btnEditPersonalInformation.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEditPersonalInformation.selected = false;
-            this.btnEditPersonalInformation.Size = new System.Drawing.Size(37, 30);
+            this.btnEditPersonalInformation.Size = new System.Drawing.Size(36, 30);
             this.btnEditPersonalInformation.TabIndex = 17;
             this.btnEditPersonalInformation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditPersonalInformation.Textcolor = System.Drawing.Color.White;
@@ -666,17 +666,6 @@
             this.bnlbPersonAddress.Size = new System.Drawing.Size(95, 20);
             this.bnlbPersonAddress.TabIndex = 13;
             this.bnlbPersonAddress.Text = "Not Included";
-            // 
-            // bnllbFullName
-            // 
-            this.bnllbFullName.AutoSize = true;
-            this.bnllbFullName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnllbFullName.ForeColor = System.Drawing.Color.White;
-            this.bnllbFullName.Location = new System.Drawing.Point(144, 58);
-            this.bnllbFullName.Name = "bnllbFullName";
-            this.bnllbFullName.Size = new System.Drawing.Size(95, 20);
-            this.bnllbFullName.TabIndex = 12;
-            this.bnllbFullName.Text = "Not Included";
             // 
             // bunifuCustomLabel5
             // 
@@ -748,19 +737,17 @@
             this.plUserInfo.Controls.Add(this.gplPersonalInfo);
             this.plUserInfo.Controls.Add(this.bnlbFullNameTitle);
             this.plUserInfo.Controls.Add(this.gplJobInfo);
-            this.plUserInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plUserInfo.Location = new System.Drawing.Point(51, 52);
             this.plUserInfo.Name = "plUserInfo";
-            this.plUserInfo.Size = new System.Drawing.Size(999, 595);
+            this.plUserInfo.Size = new System.Drawing.Size(555, 524);
             this.plUserInfo.TabIndex = 7;
             // 
             // plLocations
             // 
             this.plLocations.Controls.Add(this.splitContainer1);
-            this.plLocations.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plLocations.Location = new System.Drawing.Point(51, 52);
+            this.plLocations.Location = new System.Drawing.Point(857, 72);
             this.plLocations.Name = "plLocations";
-            this.plLocations.Size = new System.Drawing.Size(999, 595);
+            this.plLocations.Size = new System.Drawing.Size(125, 52);
             this.plLocations.TabIndex = 8;
             this.plLocations.Visible = false;
             // 
@@ -784,8 +771,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnDeleteDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.txtSearchDepartment);
             this.splitContainer1.Panel2.Controls.Add(this.lsDepartment);
-            this.splitContainer1.Size = new System.Drawing.Size(999, 595);
-            this.splitContainer1.SplitterDistance = 698;
+            this.splitContainer1.Size = new System.Drawing.Size(125, 52);
+            this.splitContainer1.SplitterDistance = 87;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -794,7 +781,7 @@
             this.lbMapPos.AutoSize = true;
             this.lbMapPos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbMapPos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMapPos.Location = new System.Drawing.Point(0, 568);
+            this.lbMapPos.Location = new System.Drawing.Point(0, 4);
             this.lbMapPos.Margin = new System.Windows.Forms.Padding(3);
             this.lbMapPos.Name = "lbMapPos";
             this.lbMapPos.Padding = new System.Windows.Forms.Padding(3);
@@ -869,7 +856,7 @@
             this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gmap.ShowTileGridLines = false;
-            this.gmap.Size = new System.Drawing.Size(698, 595);
+            this.gmap.Size = new System.Drawing.Size(87, 52);
             this.gmap.TabIndex = 1;
             this.gmap.Zoom = 15D;
             this.gmap.OnPositionChanged += new GMap.NET.PositionChanged(this.gmap_OnPositionChanged);
@@ -877,8 +864,7 @@
             // btnAddDepartment
             // 
             this.btnAddDepartment.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.btnAddDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAddDepartment.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAddDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddDepartment.BorderRadius = 0;
@@ -897,14 +883,14 @@
             this.btnAddDepartment.IconVisible = true;
             this.btnAddDepartment.IconZoom = 50D;
             this.btnAddDepartment.IsTab = false;
-            this.btnAddDepartment.Location = new System.Drawing.Point(1, 551);
+            this.btnAddDepartment.Location = new System.Drawing.Point(0, 8);
             this.btnAddDepartment.Margin = new System.Windows.Forms.Padding(24, 37, 24, 37);
             this.btnAddDepartment.Name = "btnAddDepartment";
             this.btnAddDepartment.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnAddDepartment.OnHovercolor = System.Drawing.Color.SteelBlue;
             this.btnAddDepartment.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddDepartment.selected = false;
-            this.btnAddDepartment.Size = new System.Drawing.Size(162, 44);
+            this.btnAddDepartment.Size = new System.Drawing.Size(150, 44);
             this.btnAddDepartment.TabIndex = 3;
             this.btnAddDepartment.Text = "Add";
             this.btnAddDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -915,8 +901,7 @@
             // btnDeleteDepartment
             // 
             this.btnDeleteDepartment.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.btnDeleteDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteDepartment.BackColor = System.Drawing.Color.Crimson;
             this.btnDeleteDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDeleteDepartment.BorderRadius = 0;
@@ -935,14 +920,14 @@
             this.btnDeleteDepartment.IconVisible = true;
             this.btnDeleteDepartment.IconZoom = 50D;
             this.btnDeleteDepartment.IsTab = false;
-            this.btnDeleteDepartment.Location = new System.Drawing.Point(162, 551);
+            this.btnDeleteDepartment.Location = new System.Drawing.Point(-113, 8);
             this.btnDeleteDepartment.Margin = new System.Windows.Forms.Padding(48, 85, 48, 85);
             this.btnDeleteDepartment.Name = "btnDeleteDepartment";
             this.btnDeleteDepartment.Normalcolor = System.Drawing.Color.Crimson;
             this.btnDeleteDepartment.OnHovercolor = System.Drawing.Color.DarkRed;
             this.btnDeleteDepartment.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDeleteDepartment.selected = false;
-            this.btnDeleteDepartment.Size = new System.Drawing.Size(141, 44);
+            this.btnDeleteDepartment.Size = new System.Drawing.Size(150, 44);
             this.btnDeleteDepartment.TabIndex = 4;
             this.btnDeleteDepartment.Text = "Delete";
             this.btnDeleteDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -966,7 +951,7 @@
             this.txtSearchDepartment.Location = new System.Drawing.Point(0, 0);
             this.txtSearchDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchDepartment.Name = "txtSearchDepartment";
-            this.txtSearchDepartment.Size = new System.Drawing.Size(300, 33);
+            this.txtSearchDepartment.Size = new System.Drawing.Size(37, 33);
             this.txtSearchDepartment.TabIndex = 2;
             this.txtSearchDepartment.Text = "Search Department";
             this.txtSearchDepartment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -985,9 +970,9 @@
             this.lsDepartment.HorizontalScrollbar = true;
             this.lsDepartment.IntegralHeight = false;
             this.lsDepartment.ItemHeight = 21;
-            this.lsDepartment.Location = new System.Drawing.Point(0, 50);
+            this.lsDepartment.Location = new System.Drawing.Point(1, 51);
             this.lsDepartment.Name = "lsDepartment";
-            this.lsDepartment.Size = new System.Drawing.Size(318, 500);
+            this.lsDepartment.Size = new System.Drawing.Size(33, 500);
             this.lsDepartment.TabIndex = 1;
             this.lsDepartment.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsDepartment_MouseClick);
             // 
@@ -1006,6 +991,17 @@
             this.plSalary.Size = new System.Drawing.Size(200, 25);
             this.plSalary.TabIndex = 10;
             this.plSalary.Visible = false;
+            // 
+            // bnlbPersonName
+            // 
+            this.bnlbPersonName.AutoSize = true;
+            this.bnlbPersonName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnlbPersonName.ForeColor = System.Drawing.Color.White;
+            this.bnlbPersonName.Location = new System.Drawing.Point(144, 58);
+            this.bnlbPersonName.Name = "bnlbPersonName";
+            this.bnlbPersonName.Size = new System.Drawing.Size(95, 20);
+            this.bnlbPersonName.TabIndex = 18;
+            this.bnlbPersonName.Text = "Not Included";
             // 
             // FormDashboard
             // 
@@ -1065,7 +1061,6 @@
         private Bunifu.Framework.UI.BunifuElipse elEmergencyInfo;
         private Bunifu.Framework.UI.BunifuCustomLabel blbPersonalInfo;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bnllbFullName;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
@@ -1102,5 +1097,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lbMapPos;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddDepartment;
         private Bunifu.Framework.UI.BunifuFlatButton btnDeleteDepartment;
+        private Bunifu.Framework.UI.BunifuCustomLabel bnlbPersonName;
     }
 }

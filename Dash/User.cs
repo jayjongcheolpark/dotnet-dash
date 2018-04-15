@@ -6,17 +6,25 @@ using System.Threading.Tasks;
 
 namespace Dash
 {
-    class User
+    public class User
     {
         private int _uID;
         private string _uLoginName;
         private string _uName;
+        private string _city;
+        private string _phone;
+        private string _email;
+        private string _birthdate;
 
-        public User(int uID, string uName, string uLoginName)
+        public User(int uID, string uName, string uLoginName, string city, string phone, string email, string birthdate)
         {
             _uID = uID;
             _uName = uName;
             _uLoginName = uLoginName;
+            _city = city;
+            _phone = phone;
+            _email = email;
+            _birthdate = birthdate;
         }
 
         public string Name
@@ -33,6 +41,30 @@ namespace Dash
         public int ID
         {
             get => _uID;
+        }
+
+        public string Phone
+        {
+            get => _phone;
+            set => _phone = value;
+        }
+
+        public string City
+        {
+            get => _city;
+            set => _city = value;
+        }
+
+        public string Email
+        {
+            get => _email;
+            set => _email = value;
+        }
+
+        public string Birthdate
+        {
+            get => _birthdate;
+            set => _birthdate = value;
         }
     }
 }

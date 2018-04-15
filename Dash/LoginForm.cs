@@ -12,8 +12,8 @@ namespace Dash
 {
     public partial class LoginForm : Form
     {
-        DBConnect _dbConnect;
-        public DBConnect DbConnection
+        static DBConnect _dbConnect;
+        public static DBConnect DbConnection
         {
             get => _dbConnect;
             set => _dbConnect = value;
@@ -41,6 +41,8 @@ namespace Dash
                 User user = _dbConnect.verifyUser(txtUserName.Text.Trim(), txtPassword.Text.Trim());
                 if (user != null) {
                     this.Hide();
+                    FormDashboard.DbConnection = _dbConnect;
+                    FormDashboard.User = user;
                     FormDashboard formDashboard = new FormDashboard();
                     formDashboard.ShowDialog();
                 }

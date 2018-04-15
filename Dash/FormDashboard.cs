@@ -16,6 +16,18 @@ namespace Dash
 {
     public partial class FormDashboard : Form
     {
+        static User _user;
+        static DBConnect _dbConnect;
+        public static DBConnect DbConnection
+        {
+            get => _dbConnect;
+            set => _dbConnect = value;
+        }
+        public static User User
+        {
+            get => _user;
+            set => _user = value;
+        }
         List<Department> departmentList = new List<Department>();
         BindingSource departmentBnd = new BindingSource();
 
@@ -25,6 +37,7 @@ namespace Dash
             InitializeComponent();
             departmentBnd.DataSource = departmentList;
             lsDepartment.DataSource = departmentBnd;
+
 
             departmentList.Add(new Department("1", "Admissions Department Davis Campus", "7899 McLaughlin Rd, Brampton, ON L6Y 5H9"));
             departmentList.Add(new Department("2", "IT Department Davis Campus", "7899 McLaughlin Rd, Brampton, ON L6Y 5H9"));
@@ -45,6 +58,14 @@ namespace Dash
 
         private void FormDashboard_Load(object sender, EventArgs e)
         {
+            //setting tabs
+            plLocations.Parent = this;
+            plEmployees.Parent = this;
+            plSalary.Parent = this;
+            plUserInfo.Parent = this;
+            plUserInfo.Dock = DockStyle.Fill;
+
+            //zoom icons
             userInfoTab.IconZoom = 50.0;
             locationsTab.IconZoom = 50.0;
             employeesTab.IconZoom = 50.0;
@@ -54,6 +75,7 @@ namespace Dash
             btnAddDepartment.IconZoom = 50.0;
             btnDeleteDepartment.IconZoom = 50.0;
 
+            //create map
             gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
             gmap.SetPositionByKeywords("1430 Trafalgar Rd, Oakville, ON L6H 2L1");
@@ -66,6 +88,18 @@ namespace Dash
                 gmap.Position,
                 GMarkerGoogleType.blue));
             gmap.Overlays.Add(markers);
+
+            //Add information in user tab
+            bnlbFullNameTitle.Text = _user.Name;
+
+            //personal information
+            bnlbPersonAddress.Text = _user.City;
+            bnlbPersonEmail.Text = _user.Email;
+            bnlbHomePhone.Text = _user.Phone;
+            bnlbPersonName.Text = _user.Name;
+            bnlbPersonBirthDate.Text = _user.Birthdate;
+
+            //
 
         }
 
