@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="DBConnect.cs" />
     <Compile Include="Department.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
     </Compile>

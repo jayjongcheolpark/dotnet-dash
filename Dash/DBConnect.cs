@@ -12,7 +12,8 @@ namespace Dash
         private MySqlConnection _connection = null;
         private string _server;
         private string _database, _uid, _password;
-        private MySqlCommand _verifyCM, _useraddCM, _userdelCM, _userupdateCM, _userpasswdCM;
+        private MySqlCommand _verifyCM, _useraddCM, _userdelCM, _userupdateCM, _userpasswdCM,
+            _employeeCM;
 
         public DBConnect(string database, string uid, string password)
         {
@@ -37,6 +38,7 @@ namespace Dash
                 _connection.Open();
                 try
                 {
+                    //User commands
                     _verifyCM = new MySqlCommand();
                     _verifyCM.Connection = _connection;
                     _verifyCM.CommandText = "SELECT id, name, city, phone, email, birthdate, employee FROM users WHERE username=@val1 AND password=@val2 LIMIT 1";
@@ -56,6 +58,12 @@ namespace Dash
                     _userupdateCM.Connection = _connection;
                     _userupdateCM.CommandText = "UPDATE users SET email=@val1, name=@val2 WHERE id=@val3";
                     _userupdateCM.Prepare();
+
+                    //Employee commands
+                    _employeeCM = new MySqlCommand();
+                    _employeeCM.Connection = _connection;
+                    _employeeCM.CommandText = "SELECT * FROM employee WHERE empID=@empID";
+                    _employeeCM.Prepare();
 
                     return true;
                 }catch(MySqlException ex){
@@ -132,12 +140,49 @@ namespace Dash
                     }
                 }
                 reader.Close();
+                user.JobInfo = GetEmployeeByID(user.EmployeeID);
             }
             catch (MySqlException ex)
             {
                 throw new Exception("Could not verify user: " + ex);
             }
             return user;
+        }
+
+        public Employee GetEmployeeByID(int id)
+        {
+            Employee employee = null;
+            try
+            {
+                if (_employeeCM.Parameters.Count > 0)
+                {
+                    _employeeCM.Parameters[0].Value = id;
+                }
+                else
+                {
+                    _employeeCM.Parameters.AddWithValue("@empID", id);
+                }
+                MySqlDataReader reader = _employeeCM.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        employee = new Employee(reader.GetInt32("empID"),
+                            reader.GetString("empName"),
+                            reader.GetString("empHireDate"),
+                            reader.GetDecimal("empSalary"),
+                            reader.GetString("empPhone"),
+                            reader.GetInt32("empPosition"),
+                            reader.GetInt32("empDepartment"));
+                    }
+                }
+                reader.Close();
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception("Could not get employee: " + ex.Message);
+            }
+            return employee;
         }
     }
 }
